@@ -127,7 +127,7 @@ section:last-of-type {
 }
 
 .star1 {
-    top: -40%; /* Position above the logo */
+    top: -20%; /* Position above the logo */
     left: -10%; /* Position left of the logo */
     width: 172px;
     height: 172px;
@@ -135,23 +135,23 @@ section:last-of-type {
 }
 
 .star2 {
-    top: -20%; /* Adjust position relative to top */
-    right: -10%; /* Position to the right of the logo */
+    top: -10%; /* Adjust position relative to top */
+    right: -5%; /* Position to the right of the logo */
     width: 86px;
     height: 86px;
     transform: rotate(-26.196deg);
 }
 
 .star3 {
-    bottom: -40%; /* Position below the logo */
+    bottom: -10%; /* Position below the logo */
     left: -10%; /* Offset to the left */
     width: 86px;
     height: 86px;
 }
 
 .star4 {
-    bottom: -40%; /* Position below the logo */
-    right: -10%; /* Offset to the right */
+    bottom: -10%; /* Position below the logo */
+    right: -5%; /* Offset to the right */
     width: 129px;
     height: 129px;
     transform: rotate(-69.062deg);
