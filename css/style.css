@@ -1,0 +1,811 @@
+@font-face {
+    font-family: 'Akshar';
+    src: url(../fonts/Akshar.ttf);
+}
+
+body {
+    background: var(--700---Primary---Black, #2B2725);
+}
+
+section {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+a {
+    text-decoration: none;
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+}
+
+.container {
+    width: 100vw;
+    height: auto;
+}
+
+.navigation {
+    display: flex;
+    width: 100vw;
+    height: 88px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: var(--900---Primary---Black, #17120F);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navtext {
+    font-family: 'Akshar';
+    font-size: clamp(16px, 2vw, 32px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #FAFFFD;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navtext:hover {
+    color: #36BFBA;
+}
+
+.groupnavtext {
+    display: flex;
+    width: 100%;
+    padding: 0px 24px;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.leftnav {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 3vw, 58px);
+    flex-shrink: 0;
+}
+
+.rightnav {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 3vw, 58px);
+    flex-shrink: 0; 
+    margin-left: auto;
+}
+
+.tixframe {
+    display: flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    background: var(--800---Accent---Teal, #0F7D79);
+    cursor: pointer;
+}
+
+.tixframe:hover {
+    background: #FAFFFD;
+}
+
+.home {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 88px);
+    background: var(--700---Primary---Black, #2B2725);
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    box-sizing: border-box;
+    margin-top: 88px;
+}
+
+.homeframe {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/chicago.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    justify-content: center;
+    align-items: center;
+}
+
+.star1,
+.star2,
+.star3,
+.star4 {
+    position: absolute; /* Position relative to .logo_info */
+    transform: rotate(0deg); /* Reset rotation if necessary */
+    width: 8%; /* Use percentages for responsive sizing */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.star1 {
+    top: -40%; /* Position above the logo */
+    left: -10%; /* Position left of the logo */
+    width: 172px;
+    height: 172px;
+    transform: rotate(27.855deg);
+}
+
+.star2 {
+    top: -20%; /* Adjust position relative to top */
+    right: -10%; /* Position to the right of the logo */
+    width: 86px;
+    height: 86px;
+    transform: rotate(-26.196deg);
+}
+
+.star3 {
+    bottom: -40%; /* Position below the logo */
+    left: -10%; /* Offset to the left */
+    width: 86px;
+    height: 86px;
+}
+
+.star4 {
+    bottom: -40%; /* Position below the logo */
+    right: -10%; /* Offset to the right */
+    width: 129px;
+    height: 129px;
+    transform: rotate(-69.062deg);
+}
+
+.logo {
+    width: auto; /* Adjust to the image's intrinsic dimensions */
+    height: auto; /* Keep aspect ratio intact */
+    display: block; /* Removes extra space below the image */
+}
+
+.logo_info {
+    position: relative;
+    display: flex; /* Ensures the content behaves as a flex container */
+    flex-direction: column; /* Stacks the items vertically */
+    align-items: center; /* Centers the items horizontally */
+    gap: 16px; /* Adds 10px spacing between the items */
+    width: fit-content; /* Ensures the container only takes up necessary space */
+    margin: 0 auto; /* Centers the `.logo_info` in its parent container */
+}
+
+.vec_time_location {
+    width: 335px;
+    height: 118px;
+    flex-shrink: 0;
+    position: relative; /* Set relative positioning for the container */
+}
+
+.homevector {
+    width: 100%; /* Ensure the SVG fills the container */
+    height: 100%;
+    display: block; /* Remove any extra space below the SVG */
+    position: absolute; /* Allows text to layer on top */
+    top: 0; /* Align SVG to the top of the container */
+    left: 0; /* Align SVG to the left of the container */
+    z-index: 1; /* Ensure the SVG is behind the text */
+    fill: var(--925---Accent---Pink, #B10053);
+}
+
+.time_location {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    z-index: 2; /* Ensure the text is above the SVG */
+    position: absolute; /* Enables precise placement over the SVG */
+    top: 50%; /* Center text vertically */
+    left: 50%; /* Center text horizontally */
+    transform: translate(-50%, -50%); /* Adjusts the positioning to the exact center */
+    color: white; /* Makes text visible against the background */
+    text-align: center; 
+    white-space: nowrap;
+}
+
+.button {
+    display: flex;
+    width: 388px;
+    height: 76px;
+    padding-inline: 16px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    text-align: center;
+    font-family: Akshar;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.teal {
+    background: var(--800---Accent---Teal, #0F7D79);
+    color: var(--10---Primary---White, #FAFFFD);
+    transition: all 0.3s ease;
+}
+
+.teal:hover {
+    background: var(--10---Primary---White, #FAFFFD);
+    color: var(--800---Accent---Teal, #0F7D79);
+}
+
+.outline {
+    border: 3px solid var(--10---Primary---White, #FAFFFD);
+    color: var(--10---Primary---White, #FAFFFD);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.outline:hover {
+    border: 3px solid var(--300---Accent---Teal, #36BFBA);
+    color: var(--300---Accent---Teal, #36BFBA);
+}
+
+.homebuttons {
+    display: flex;
+    width: 840px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-video {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.what-is-lolla {
+    font-family: 'Akshar';
+    font-size: 60px;
+    font-weight: bold;
+    margin: 40px;
+    color: #FAFFFD;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.video-frame {
+    flex-grow: 1; /* Allow the video to take the remaining height */
+    width: 100%; /* Full width */
+    position: relative; /* Ensures the video fits properly */
+    overflow: hidden;
+}
+
+.lolla-video {
+    width: 100%; /* Make video fill the frame */
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-pics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    padding: 24px 24px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 2000px;
+    box-sizing: border-box;
+    gap: 16px;
+}
+
+.info-group {
+    display: flex;
+    width: 391.541px;
+    height: 526px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    position: relative;
+}
+
+.info-text {
+    width: 391px;
+    font-family: 'Akshar';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    color: var(--10---Primary---White, #FAFFFD);
+    text-align: center;
+}
+
+.infopic {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.infopic:hover {
+    transform: scale(1.1);
+}
+
+.foodvector {
+    width: 386px;
+    height: 379px;
+    top: 0px;
+    flex-shrink: 0;
+    fill: var(--500---Accent---Yellow, #FFBD51);
+}
+
+.cityvector {
+    width: 384.5px;
+    height: 420px;
+    top: -10px;
+    flex-shrink: 0;
+    fill: var(--700---Accent---Teal, #158F8B);
+}
+
+.bandvector {
+    width: 336.5px;
+    height: 338px;
+    flex-shrink: 0;
+    top: 45px;
+    fill: var(--500---Accent---Pink, #FF499E);
+}
+
+.infovector {
+    position: absolute;
+    z-index: 1;
+    transition: transform 0.4s ease;
+    transition-delay: 0.1s;
+    transform-origin: center;
+}
+
+.infopic:hover + .infovector {
+    transform: scale(1.15);
+}
+
+.partners {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    width: 100vw;
+    height: fit-content;
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    padding: 24px; /* Optional padding for spacing */
+    box-sizing: border-box; 
+}
+
+.main-header {
+    /* Main Sectiion Header */
+    font-family: 'Akshar';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.partner-text {
+    align-self: stretch;
+    text-align: center;
+    color: var(--10---Primary---White, #FAFFFD);
+    margin-bottom: 24px;
+    margin-top: 80px;
+}
+
+.partner-boxes {
+    display: flex;
+    width: 1392px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 32px 20.729px;
+    flex-wrap: wrap;
+}
+
+.partner-box {
+    width: 129.559px;
+    height: 129.559px;
+    flex-shrink: 0;
+    background: lightgray 50% / cover no-repeat;
+}
+
+.tmobile {
+    background: url(../images/partners/tmobile.png);
+}
+
+.budlight {
+    background: url(../images/partners/budlight.png);
+}
+
+.sapphire {
+    background: url(../images/partners/sapphire.png);
+}
+
+.titos {
+    background: url(../images/partners/titos.png);
+}
+
+.bacardi {
+    background: url(../images/partners/bacardi.png);
+}
+
+.hulu {
+    background: url(../images/partners/hulu.png);
+}
+
+.paypal {
+    background: url(../images/partners/paypal.png);
+}
+
+.venmo {
+    background: url(../images/partners/venmo.png);
+}
+
+.toyota {
+    background: url(../images/partners/toyota.png);
+}
+
+.bmi {
+    background: url(../images/partners/bmi.png);
+}
+
+.ihg {
+    background: url(../images/partners/ihg.png);
+}
+
+.uber {
+    background: url(../images/partners/uber.png);
+}
+
+.dunkin {
+    background: url(../images/partners/dunkin.png);
+}
+
+.coke {
+    background: url(../images/partners/coke.png);
+}
+
+.tictac {
+    background: url(../images/partners/tictac.png);
+}
+
+.liquidiv {
+    background: url(../images/partners/liquidiv.png);
+}
+
+.kimcrawford {
+    background: url(../images/partners/kimcrawford.png);
+}
+
+.ulta {
+    background: url(../images/partners/ulta.png);
+}
+
+.aboutface {
+    background: url(../images/partners/aboutface.png);
+}
+
+.mnm {
+    background: url(../images/partners/mnm.png);
+}
+
+.aa {
+    background: url(../images/partners/americanapparel.png);
+}
+
+.snapchat {
+    background: url(../images/partners/snapchat.png);
+}
+
+.treehut {
+    background: url(../images/partners/treehut.png);
+}
+
+.lifeway {
+    background: url(../images/partners/lifeway.png);
+}
+
+.jackdaniels {
+    background: url(../images/partners/jackdaniels.png);
+}
+
+.bumble {
+    background: url(../images/partners/bumble.png);
+}
+
+.levis {
+    background: url(../images/partners/levis.png);
+}
+
+.hendricks {
+    background: url(../images/partners/hendricks.png);
+}
+
+.waterloo {
+    background: url(../images/partners/waterloo.png);
+}
+
+.cutwater {
+    background: url(../images/partners/cutwater.png);
+}
+
+.aguasol {
+    background: url(../images/partners/aguasol.png);
+}
+
+.krewe {
+    background: url(../images/partners/krewe.png);
+}
+
+.mf {
+    background: url(../images/partners/mf.png);
+}
+
+.hennessy {
+    background: url(../images/partners/hennessy.png);
+}
+
+.owens {
+    background: url(../images/partners/owens.png);
+}
+
+.sunbelt {
+    background: url(../images/partners/sunbelt.png);
+}
+
+.footer {
+    width: 100vw;
+    height: 444px;
+    flex-shrink: 0;
+    display: flex;
+    background: var(--900---Primary---Black, #17120F);
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Ensures footer groups and subscription group are spaced apart */
+    width: 100%;
+    align-items: flex-start;
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-groups {
+    display: flex;
+    align-items: flex-start;
+    gap: 160px;
+}
+
+.footer-group {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footer-section {
+    color: var(--10---Primary---White, #FAFFFD);
+
+    /* Footer Section */
+    font-family: Akshar;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    align-self: stretch;
+}
+
+.footer-subsection {
+    color: var(--10---Primary---White, #FAFFFD);
+
+    /* Footer Subsection */
+    font-family: Akshar;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    align-self: stretch;
+}
+
+.subscription-group {
+    display: flex;
+    width: 430px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    flex-shrink: 0;
+}
+
+.subscribe-and-email {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.enter-email {
+    display: flex;
+    padding: 14px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+
+    background: var(--10---Primary---White, #FAFFFD);
+
+    color: var(--300---Primary---Black, #6A6765);
+    text-align: center;
+    font-family: Akshar;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.signup {
+    background: var(--500---Accent---Yellow, #FFBD51);
+}
+
+.navlogo {
+    display: block;
+    max-width: 30%;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.headliners {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 88px);
+    background: var(--700---Primary---Black, #2B2725);
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    box-sizing: border-box;
+    margin-top: 88px;
+}
+
+.headlinerframe {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: #17120F;
+    padding: 16px 24px;
+    box-sizing: border-box;
+}
+
+.headliner-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    grid-column-gap: 32px; /* Gap between columns */
+    grid-row-gap: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+.headliner-day {
+    width: 100%;
+    height: 100%;
+    background: #2B2725;
+    overflow: hidden;
+    position: relative;
+}
+
+.megan {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 20%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hozier {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 0px;
+    left: 300px;
+    z-index: 1;
+}
+
+.thurs-vector {
+    width: 270px;
+    height: 128px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.headliner-details {
+    font-family: Akshar;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.headliner-text {
+    color: var(--10---Primary---White, #FAFFFD);
+    max-width: 242px;
+    position: relative;
+    left: 5px;
+    z-index: 3;
+}
+
+.headliner-info {
+    width: 270px;
+    height: 130.5px;
+    flex-shrink: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.left-align {
+    text-align: left;
+    left: 0;
+}
+
+.right-align {
+    text-align: right;
+    right: 0;
+}
+
+.bottom-align {
+    bottom: 0;
+}
+
+.fri-vector {
+    flex-shrink: 0;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 0;
+}
+
+.straykids {
+    position: absolute;
+    height: 100%;
+    right: 25%;
+}
+
+.sza {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 10%;
+}
+
+.sat-vector {
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 50px;
+    z-index: 0;
+}
