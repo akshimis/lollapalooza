@@ -3,6 +3,10 @@
     src: url(../fonts/Akshar.ttf);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--700---Primary---Black, #2B2725);
 }
@@ -731,7 +735,7 @@ section:last-of-type {
     height: 100%;
     width: auto;
     top: 0px;
-    left: 300px;
+    right: 20%;
     z-index: 1;
 }
 
@@ -993,6 +997,7 @@ section:last-of-type {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    cursor: default;
 }
 
 .artist-small {
@@ -1011,4 +1016,5 @@ section:last-of-type {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    cursor: default;
 }
