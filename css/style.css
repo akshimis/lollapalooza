@@ -891,12 +891,13 @@ section:last-of-type {
 }
 
 .lineup-search {
-    width: 80%;
+    width: 60%;
     background: var(--900---Primary---Black, #17120F);
     display: flex;
-    padding: 4px 12px;
+    padding: 4px 16px;
     align-items: center;
     gap: 8px;
+    cursor: text;
 }
 
 .search-text {
@@ -912,6 +913,7 @@ section:last-of-type {
 .filter-box {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 24px;
     margin-bottom: 40px;
 }
@@ -924,41 +926,47 @@ section:last-of-type {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    cursor: default;
 }
 
 .filter-border {
     padding: 4px 12px;
     background: #17120F;
+    cursor: pointer;
 }
 
 .days-filter {
     display: inline-flex;
     align-items: center;
-    padding: 12px 24px;
+    justify-content: center;
+    padding: 12px 16px;
+    width: 60%;
     gap: 24px;
-    background: #45413F;
+    background: #17120F;
 }
 
 .day-box-selected {
     padding: 4px 12px;
-    background: #36BFBA;
-    color: #17120F;
+    background: #0F7D79;
+    color: #FAFFFD;
+    cursor: pointer;
 }
 
 .day-box {
     padding: 4px 12px;
-    background: #17120F;
-    color: #FAFFFD;
+    background: #FAFFFD;
+    color: #17120F;
+    cursor: pointer;
 }
 
 .stage-box {
     display: flex;
     width: 80%;
-    padding: 16px 52px;
+    padding: 16px 16px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 24px;
     background: var(--600---Primary---Black, #45413F);
 }
 
@@ -972,7 +980,7 @@ section:last-of-type {
     justify-content: center;
     align-items: center;
     align-content: center;
-    gap: 40px 24px;
+    gap: 24px 24px;
     align-self: stretch;
     flex-wrap: wrap;
 }
